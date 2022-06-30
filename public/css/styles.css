@@ -7,8 +7,15 @@ body{
   margin: auto;
   max-width: 1140px;
 }
+ul{
+list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
 .parent{
-  height: 650px;
+  /* height: 650px; */
+  padding-bottom: 12%;
   background: #FFF2F2;
   position: relative;
   overflow: hidden;
@@ -19,7 +26,7 @@ body{
   bottom:0;
   left:0;
   width: 100%;
-  height: 100px;
+  padding-bottom: 8%;
   background-image:url(../images/header3.png) ;
   background-size: 100%;
   /* background-color: antiquewhite; */
@@ -28,8 +35,9 @@ body{
 header h1{
   color: #E3767E;
   font-size: 52px;
-  margin-top:280px ;
-  margin-left: 40%;
+  text-align: center;
+  line-height: 180px;
+  margin-top: 200px;
 }
 
 .child{
@@ -39,27 +47,184 @@ header h1{
   /* background: lightblue; */
 }
 .child1{
-  left:-100px;
-  top:-240px;
+  width: 40%;
+  height: 50%;
+  left:-120px;
+  top:-40px;
   transform:rotate(125deg);
 }
 
 .child2{
-  left:40%;
-  top:-140px;
+  width: 25%;
+  height: 60%;
+  left:38%;
+  top:-120px;
   transform:rotate(-180deg);
 }
 
 .child3{
-  right:-100px;
-  top:-170px;
+  width: 35%;
+  height: 80%;
+  right:-150px;
+  top:-200px;
   transform:rotate(-125deg);
 }
 .child4{
+  width: 28%;
+  height: 50%;
   left: -30px;;
-  bottom:-80px;
+  bottom:60px;
 }
 .child5 {
+  width: 35%;
+  height: 53%;
   right:-50px;
   bottom:0px;
 }
+nav img{
+  width: 22%;
+  display: block;
+  margin: 0 auto;
+}
+header  ul {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+header li {
+  margin:0 40px ;
+  text-align: center;
+}
+
+header a {
+  line-height: 50px;
+  text-decoration: none;
+  color: #551E1E;
+  font-size: 24px;
+  /* letter-spacing: 2px; */
+  font-weight: bold;
+  box-sizing: border-box;
+  display: block;
+}
+
+header   li  a:hover {
+  color: #E3767E;
+}
+.title{
+  text-align: center;
+  margin-top: 100px;
+  color: #EF6735;
+
+}
+.numer{
+  display: flex;
+  width: 100%;
+}
+.linear{
+  background-image: url(../images/linear.png);
+  width: 33.3333%;
+  height: 300px;
+  background-size: contain;
+  padding-bottom: 20%;
+  background-repeat: no-repeat;
+  margin: 0 5px;
+
+}
+.linear h3{
+  position: relative;
+  text-align: center;
+  font-size: 44px;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  left: 0%;
+  top: 50%;
+}
+.linear p{
+  font-size: 20px;
+  color: #373737;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .parent{
+    padding-bottom: 10%;
+  }
+  header h1{
+    font-size: 44px;
+    line-height: 200px;
+  margin-top: 180px;
+  }
+  .child1{
+    width: 50%;
+    height: 50%;
+    left:-110px;
+    top:-30px;
+  }
+  .child2{
+    width: 30%;
+    height: 55%;
+    left:35%;
+    top:-70px;
+  }
+  .child3{
+    width: 40%;
+    height: 90%;
+    right:-150px;
+    top:-200px;
+  }
+  .child4{
+    width: 30%;
+    left: -40px;;
+    bottom:20px;
+  }
+  .child5 {
+    width: 40%;
+    height: 55%;
+    right:-50px;
+    bottom:-20px;
+  }
+}
+@media (max-width: 768px) {
+  .parent{
+    padding-bottom: 7%;
+  }
+  header h1{
+    font-size: 36px;
+    line-height: 250px;
+  margin-top: 120px;
+  }
+  .child1{
+    width: 60%;
+    height: 50%;
+    left:-110px;
+    top:-30px;
+  }
+  .child2{
+    width: 40%;
+    height: 55%;
+    left:30%;
+    top:-70px;
+  }
+  .child3{
+    width: 50%;
+    right:-150px;
+    top:-160px;
+  }
+  .child4{
+    width: 38%;
+    left: -60px;;
+    bottom:0px;
+  }
+  .child5 {
+    width: 48%;
+    height: 55%;
+    right:-50px;
+    bottom:-70px;
+  }
+  
+}
+
+
+

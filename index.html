@@ -29,8 +29,8 @@
             <img src="public/images/cat1-3 1.png" style="width:100%";>
           </div>
         </div>
-        <nav>
-          <img src="public/images/logo2.png">
+        <nav >
+          <img src="public/images/logo2.svg" >
           <div class="container">
             <ul>
               <li><a href="about-me.html">關於我們</a></li>
@@ -40,20 +40,35 @@
             </ul>
           </div>
         </nav>
-    </div>
+        <div class="container ">
+          <nav class="active nav" id="topbar">
+            <div class="row flex-space-between ">
+                <a href="index.html"><img src="public/images/logo2.svg"  ></a>
+                <a class="nav-icon" id="btn-nav-toggle" href=""></a>
+                <nav id="primary-navigation" class="nav2" >
+                  <ul>
+                    <li><a href="about-me.html">關於我們</a></li>
+                    <li><a href="about-me.html">認養</a></li>
+                    <li><a href="about-me.html">助糧</a></li>
+                    <li><a href="about-me.html">會員專區</a></li>
+                  </ul>
+                </nav>
+            </div>
+          </nav>
+        </div>
     </header>
     <section class="container">
       <h1 class="title">目前現況</h1>
       <div class="list">
-        <div class="linear col-12 col-md-6 col-lg-4">
+        <div class="linear ">
           <h3>12,200</h3>
           <p>全台流浪貓大約數量</p>
         </div>
-        <div class="linear col-12 col-md-6 col-lg-4">
+        <div class="linear ">
           <h3>5200</h3>
           <p>公立收容所收養數量</p>
         </div>
-        <div class="linear col-12 col-md-6 col-lg-4">
+        <div class="linear ">
           <h3>152%</h3>
           <p>台北收容所可收容比例</p>
         </div>
@@ -63,7 +78,7 @@
     </section>
     <section class="container">
       <h1 class="title">我們可以做的事</h1>
-      <div class="list">
+      <div class="list2">
         <div class="wedo we-can-do1">
           <h1>領養</h1>
           <p>給貓咪一個家，<br>帶回家自行照顧</p>
@@ -128,6 +143,20 @@
       </div>
 
     </footer>
+
+
+    <script type="text/javascript">
+      window.onscroll = function () {
+          var top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+          var node = document.getElementById('topbar');
+          if (top > 800) {//500就是滚动条滚动到的位置，大于500(500指500px)才显示
+              node.style.display = 'block';
+          } else {
+              node.style.display = 'none';
+          }
+      }
+  </script>
+ 
 
   </body>
 </html>

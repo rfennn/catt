@@ -1,6 +1,10 @@
 body{
   margin: 0;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 .container {
   /* background-color: #a8a86d; */
   width: 80%;
@@ -87,10 +91,28 @@ nav img{
   display: block;
   margin: 0 auto;
 }
-header  ul {
+nav.active {
   display: flex;
+  position: fixed;
+  top: 0px;
+  right: 0px;
   width: 100%;
-  text-align: center;
+  z-index: 10;
+  justify-content: space-around;
+  background: #FFF2F2;
+  height: 80px;
+}
+nav.active img{
+  position: fixed;
+  top: 0px;
+  left: 50px;
+  width: 250px;
+  height: 80px;
+}
+nav.active a{
+  line-height: 80px;
+}
+header  ul {
   justify-content: center;
 }
 
@@ -113,10 +135,14 @@ header a {
 header   li  a:hover {
   color: #E3767E;
 }
+.nav-icon{
+  display: none;
+}
 .title{
   text-align: center;
   margin-top: 100px;
   color: #EF6735;
+  margin-bottom: 20px;
 
 }
 .list{
@@ -126,11 +152,11 @@ header   li  a:hover {
 .linear{
   background-image: url(../images/linear.png);
   width: 33.3333%;
-  height: 300px;
+  height: 280px;
   background-size: contain;
-  /* padding-bottom: 20%; */
+  padding-bottom: 2%;
   background-repeat: no-repeat;
-  margin-right: 40px;
+  margin: 0 20px;
 
 }
 .linear h3{
@@ -138,7 +164,6 @@ header   li  a:hover {
   text-align: center;
   font-size: 45px;
   color: rgb(255, 255, 255);
-  margin: 0;
   left: 0%;
   top: 50%;
 }
@@ -147,7 +172,13 @@ header   li  a:hover {
   color: #373737;
   text-align: center;
   font-weight: bold;
+  margin-top: 20px;
 }
+.list2{
+  display: flex;
+  width: 100%;
+}
+
 .wedo>h1{
   font-size: 36px;
   color: #E3767E;
@@ -193,11 +224,12 @@ header   li  a:hover {
   margin: auto;
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 20px;
   
 }
 .footer{
   /* height: 650px; */
-  padding-top: 12%;
+  padding-top: 8%;
   background: #F7E5B4;
   position: relative;
   overflow: hidden;
@@ -215,11 +247,14 @@ header   li  a:hover {
   z-index: 0;
 }
 footer img{
-  width: 180px;
+  width: 150px;
   margin-left: 60px;
 }
 .logo{
   margin: 0;
+}
+.icon-menu{
+  width: 250px;
 }
 
 .container-display-flex-nowrap{
@@ -263,15 +298,18 @@ footer img{
   margin-right: 50px;
   margin-top: 20px;
 }
+/*1200pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 1200px) {
   .parent{
     padding-bottom: 10%;
   }
-  header h1{
-    font-size: 44px;
-    line-height: 200px;
-  margin-top: 180px;
+  header a {
+    font-size: 18px;
   }
+  .icon-menu {
+    display: none;
+}
+
   .child1{
     width: 50%;
     height: 50%;
@@ -301,20 +339,95 @@ footer img{
     right:-50px;
     bottom:-20px;
   }
-  .linear{
-    height: 230px;
-  }
   
+  
+}
+@media (max-width: 1060px) {
+  .nav2 ul{
+    margin-left: 235px;
+
+}
+.linear h3{
+  font-size: 38px;
+  top: 40%;
+}
+.linear p{
+  font-size: 17px;
+  }
+}
+/*768pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+@media (min-width: 768px) {
+  header ul{
+  display: flex ;
+}
+
 }
 @media (max-width: 768px) {
   .parent{
     padding-bottom: 7%;
+  }
+  header ul{
+    margin-top: 20px;
+  }
+  header a {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  .row {
+    display: flex;
+    
+    /*換行*/
+  }
+
+  .flex-space-between {
+    justify-content: space-between;
+    position: relative;
   }
   header h1{
     font-size: 36px;
     line-height: 250px;
   margin-top: 120px;
   }
+  .nav2{
+    width: 60%;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #F7E5B4;
+}
+
+.nav2> ul {
+  display: block;
+  margin-left: 0px;
+}
+.nav2 > ul > li {
+  text-align: center;
+  border-bottom: 1px solid #bdb3a7;
+  padding: 20px 0;
+}
+header > .container .nav2 > ul > li > a {
+  display: block;
+  line-height: 40px;
+  width: 100%;
+}
+.nav-icon {
+  background-color: #FFF2F2;
+  color: white;
+  height: 80px;
+  width: 15%;
+  display: block;
+  text-align: center;
+  background-image: url(../images/text_align_justify.svg);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
   .child1{
     width: 60%;
     height: 50%;
@@ -346,14 +459,24 @@ footer img{
   .linear{
     height: 150px;
   }
+  .linear h3{
+    font-size: 25px;
+    top: 50%;
+  }
+  .linear p{
+    font-size: 12px;
+    margin-top: 10px;
+    }
   
   
   
 }
+/*480pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 480px) {
   .parent{
     padding-bottom: 3%;
   }
+  
   header h1{
     font-size: 28px;
     line-height: 210px;
@@ -368,9 +491,15 @@ footer img{
     width: 45%;
     bottom:-50px;
   }
-  .linear{
-    height: 150px;
+  
+  .linear h3{
+    font-size: 20px;
+    top: 25%;
   }
+  .linear p{
+    font-size: 15px;
+    margin-top: 80px;
+    }
   
   
   

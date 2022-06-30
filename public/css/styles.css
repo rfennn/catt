@@ -6,6 +6,7 @@ body{
   width: 80%;
   margin: auto;
   max-width: 1140px;
+  
 }
 ul{
 list-style-type: none;
@@ -102,7 +103,7 @@ header a {
   line-height: 50px;
   text-decoration: none;
   color: #551E1E;
-  font-size: 24px;
+  font-size: 22px;
   /* letter-spacing: 2px; */
   font-weight: bold;
   box-sizing: border-box;
@@ -118,7 +119,7 @@ header   li  a:hover {
   color: #EF6735;
 
 }
-.numer{
+.list{
   display: flex;
   width: 100%;
 }
@@ -127,24 +128,90 @@ header   li  a:hover {
   width: 33.3333%;
   height: 300px;
   background-size: contain;
-  padding-bottom: 20%;
+  /* padding-bottom: 20%; */
   background-repeat: no-repeat;
-  margin: 0 5px;
+  margin-right: 40px;
 
 }
 .linear h3{
   position: relative;
   text-align: center;
-  font-size: 44px;
+  font-size: 45px;
   color: rgb(255, 255, 255);
   margin: 0;
   left: 0%;
   top: 50%;
 }
 .linear p{
-  font-size: 20px;
+  font-size: 23px;
   color: #373737;
   text-align: center;
+  font-weight: bold;
+}
+.wedo>h1{
+  font-size: 36px;
+  color: #E3767E;
+  text-align: center;
+  margin-top: 50px;
+  
+}
+.wedo>p{
+  text-align: center;
+  font-size: 20px;
+}
+.we-can-do1{
+  background-image: url(../images/we-can-do1.svg);
+  width: 100%;
+  height: 250px;
+  /* height: 300px; */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.we-can-do2{
+  background-image: url(../images/we-can-do2.svg);
+  width: 100%;
+  height: 250px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.we-can-do3{
+  background-image: url(../images/we-can-do3.svg);
+  width: 100%;
+  height: 250px;
+  background-size: contain;
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+}
+.choose{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  
+}
+.footer{
+  /* height: 650px; */
+  padding-top: 27%;
+  background: #F7E5B4;
+  position: relative;
+  overflow: hidden;
+}
+.footer::after{
+  position: absolute;
+  content:'';
+  top:-5px;
+  left:0;
+  width: 100%;
+  padding-top: 12.4%;
+  background-image:url(../images/footer.svg) ;
+  background-size: 100%;
+  /* background-color: antiquewhite; */
+  z-index: 0;
 }
 
 @media (max-width: 1200px) {
@@ -185,6 +252,10 @@ header   li  a:hover {
     right:-50px;
     bottom:-20px;
   }
+  .linear{
+    height: 230px;
+  }
+  
 }
 @media (max-width: 768px) {
   .parent{
@@ -223,7 +294,40 @@ header   li  a:hover {
     right:-50px;
     bottom:-70px;
   }
+  .linear{
+    height: 150px;
+    max-width: 60%;
+  }
   
+  
+  
+}
+@media (max-width: 480px) {
+  .parent{
+    padding-bottom: 3%;
+  }
+  header h1{
+    font-size: 28px;
+    line-height: 210px;
+  margin-top: 80px;
+  }
+  .child3{
+    width: 50%;
+    right:-100px;
+    top:-120px;
+  }
+    .child5 {
+    width: 45%;
+    bottom:-50px;
+  }
+  .linear{
+    height: 150px;
+    max-width: 60%;
+  }
+  
+  
+  
+
 }
 
 

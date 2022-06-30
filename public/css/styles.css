@@ -192,11 +192,12 @@ header   li  a:hover {
   width: 100%;
   margin: auto;
   text-align: center;
+  margin-bottom: 50px;
   
 }
 .footer{
   /* height: 650px; */
-  padding-top: 27%;
+  padding-top: 12%;
   background: #F7E5B4;
   position: relative;
   overflow: hidden;
@@ -213,7 +214,55 @@ header   li  a:hover {
   /* background-color: antiquewhite; */
   z-index: 0;
 }
+footer img{
+  width: 180px;
+  margin-left: 60px;
+}
+.logo{
+  margin: 0;
+}
 
+.container-display-flex-nowrap{
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: space-around;
+  align-items:center;
+}
+.container-display-flex-nowrap>ul{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  
+  
+}
+.footer-block li {
+  margin:0 20px ;
+}
+
+.footer-block a {
+  line-height: 50px;
+  text-decoration: none;
+  color: #551E1E;
+  font-size: 18px;
+  /* letter-spacing: 2px; */
+  font-weight: bold;
+  box-sizing: border-box;
+  display: block;
+}
+.footer-block   li  a:hover {
+  color: #E3767E;
+}
+.footer-block h2{
+  margin: 0;
+  margin-top: 5px;
+  color: #551E1E;
+}
+
+
+.icon-menu{
+  margin-right: 50px;
+  margin-top: 20px;
+}
 @media (max-width: 1200px) {
   .parent{
     padding-bottom: 10%;
@@ -296,7 +345,6 @@ header   li  a:hover {
   }
   .linear{
     height: 150px;
-    max-width: 60%;
   }
   
   
@@ -322,7 +370,6 @@ header   li  a:hover {
   }
   .linear{
     height: 150px;
-    max-width: 60%;
   }
   
   

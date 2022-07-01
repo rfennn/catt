@@ -16,6 +16,6 @@ $(window).resize(function () {
   // widthWidth 在每次縮放視窗寬度時，換上當前的視窗寬度的數值
   // 小於768執行
   $('#btn-nav-switch').on('click', function () {
-    $('.nav2').toggleClass('active');
+    $('.header').toggleClass('active');
   }); // btn-nav-switch end
 }); // windowWidth>=768 end

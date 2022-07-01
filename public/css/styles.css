@@ -18,6 +18,7 @@ list-style-type: none;
 a {
   text-decoration: none;
 }
+/* **************封面圖************** */
 .parent{
   /* height: 650px; */
   padding-bottom: 12%;
@@ -86,22 +87,14 @@ header h1{
   right:-50px;
   bottom:0px;
 }
-nav img{
-  width: 22%;
+/* **************nav************** */
+
+.nav1 img{
+  width: 12%;
   display: block;
   margin: 0 auto;
 }
-nav.active {
-  display: flex;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  z-index: 10;
-  justify-content: space-around;
-  background: #FFF2F2;
-  height: 80px;
-}
+
 nav.active img{
   position: fixed;
   top: 0px;
@@ -109,9 +102,7 @@ nav.active img{
   width: 150px;
   height: 80px;
 }
-nav.active a{
-  line-height: 80px;
-}
+
 header  ul {
   justify-content: center;
 }
@@ -122,7 +113,7 @@ header li {
 }
 
 header a {
-  line-height: 50px;
+  line-height: 80px;
   text-decoration: none;
   color: #551E1E;
   font-size: 22px;
@@ -139,6 +130,7 @@ header   li  a:hover {
   display: none;
 }
 
+/* **************目前現況************** */
 .title{
   text-align: center;
   margin-top: 100px;
@@ -175,6 +167,8 @@ header   li  a:hover {
   font-weight: bold;
   margin-top: 20px;
 }
+/* **************我們可以做的事************** */
+
 .list2{
   display: flex;
   width: 100%;
@@ -223,6 +217,8 @@ header   li  a:hover {
   border-radius: 5px;
   margin:20px auto;
 }
+/* **************為什麼選擇************** */
+
 .mg-top{
   margin-top: 50px;
 }
@@ -234,6 +230,8 @@ header   li  a:hover {
   
   
 }
+/* **************封底************** */
+
 .footer{
   /* height: 650px; */
   padding-top: 8%;
@@ -247,7 +245,7 @@ header   li  a:hover {
   top:-5px;
   left:0;
   width: 100%;
-  padding-top: 12.4%;
+  padding-top: 12.3%;
   background-image:url(../images/footer.svg) ;
   background-size: 100%;
   /* background-color: antiquewhite; */
@@ -257,21 +255,14 @@ footer img{
   width: 150px;
   margin-left: 60px;
 }
-.logo{
-  margin: 0;
-}
+
 .icon-menu{
   width: 250px;
   margin-right: 50px;
   margin-top: 20px;
 }
 
-.container-display-flex-nowrap{
-  display: flex;
-  flex-wrap:nowrap;
-  justify-content: space-around;
-  align-items:center;
-}
+
 .container-display-flex-nowrap>ul{
   display: flex;
   width: 100%;
@@ -306,6 +297,7 @@ footer img{
 
 /*1200pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 1200px) {
+  /* **************封面圖************** */
   .parent{
     padding-bottom: 10%;
   }
@@ -349,9 +341,8 @@ footer img{
   
 }
 @media (max-width: 1060px) {
-  .nav2 ul{
-    margin-left: 235px;
-
+.nav2 {
+  margin-left: 150px;
 }
 .linear h3{
   font-size: 38px;
@@ -360,6 +351,12 @@ footer img{
 .linear p{
   font-size: 17px;
   }
+.footer li{
+  margin: 0 10px;
+}
+.footer a{
+  font-size: 14px;
+}
 }
 /*768pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (min-width: 768px) {
@@ -369,13 +366,31 @@ footer img{
 .display-md-none {
   display: none;
 }
-
+nav.active {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  z-index: 10;
+  justify-content: space-around;
+  height: 80px;
+  display: block;
+  background-color: #FFF2F2;
 }
+.container-display-flex-nowrap{
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: space-around;
+  align-items:center;
+}
+}
+/*768pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 768px) {
   .parent{
     padding-bottom: 7%;
   }
-  header ul{
+  .nav1 ul{
     margin-top: 20px;
   }
   header a {
@@ -389,8 +404,6 @@ footer img{
   .row {
     display: flex;
     justify-content: space-between;
-    
-    /*換行*/
   }
 
   .flex-space-between {
@@ -405,49 +418,6 @@ footer img{
     position: relative;
 
   }
-  .nav2{
-    display: none;
-    width: 60%;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background-color: #F7E5B4;
-}
-.nav2.active{
-  display: block;
-}
-
-.nav2> ul {
-  display: block;
-  margin-left: 0px;
-  margin-top: 80px;
-  background-color: #fcedd0;
-}
-.nav2 > ul > li {
-  text-align: center;
-  border-bottom: 1px solid #bdb3a7;
-  padding: 10px 0;
-  
-}
-header > .container .nav2 > ul > li > a {
-  display: block;
-  line-height: 40px;
-  width: 100%;
-}
-.nav-icon {
-  background-color: #FFF2F2;
-  color: white;
-  height: 80px;
-  width: 15%;
-  display: block;
-  text-align: center;
-  background-image: url(../images/text_align_justify.svg);
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  
-}
-
   .child1{
     width: 60%;
     height: 50%;
@@ -487,7 +457,97 @@ header > .container .nav2 > ul > li > a {
     font-size: 12px;
     margin-top: 10px;
     }
+.nav2{
+  display: none;
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 80px;
+}
+.header.active {
+  top: 0px;
+  right: 0px;
+  justify-content: space-around;
+}
+.header{
+  height: 80px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: #FFF2F2;
+  z-index: 10;
+  display: block;
+  top: 0;
+}
+/* ****************nav2********************* */
+nav.active {
+  justify-content: space-around;
+  display: block;
+}
+.nav2> ul {
+display: block;
+margin-left: 0px;
+background-color: #fcedd0;
+}
+.nav2 > ul > li {
+text-align: center;
+border-bottom: 1px solid #bdb3a7;
+padding: 10px 0;
+
+}
+header > .container .nav2 > ul > li > a {
+display: block;
+line-height: 40px;
+width: 100%;
+}
+.nav-icon {
+height: 80px;
+width: 15%;
+display: block;
+text-align: center;
+background-image: url(../images/text_align_justify.svg);
+background-size: 50%;
+background-position: center;
+background-repeat: no-repeat;
+}
+.nav2{
+  display: none;
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 80px;
+}
+.header.active {
+  top: 0px;
+  right: 0px;
+  justify-content: space-around;
+}
+.header{
+  height: 80px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: #FFF2F2;
+  z-index: 10;
+  display: block;
+  top: 0;
+}
+/* ******************頁尾************ */
+footer img{
+  width: 100px;
+  margin:30px auto ;
+  display: block;
+}
+.icon-menu img{
+  width: 150px;
+}
+.icon-menu{
+  margin-top: 20px;
+  margin: 5px auto;
   
+}
+.container-display-flex-nowrap ul{
+  display: none ;
   
   
 }
@@ -527,4 +587,7 @@ header > .container .nav2 > ul > li > a {
 }
 
 
+@media (max-width: 768px) {
+
+}
 

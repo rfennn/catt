@@ -18,7 +18,7 @@ $(window).resize(function(){
     
         // 小於768執行
         $('#btn-nav-switch').on('click', function(){
-            $('.nav2').toggleClass('active')
+            $('.header').toggleClass('active')
         })// btn-nav-switch end
         
         

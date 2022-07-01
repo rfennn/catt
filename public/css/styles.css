@@ -138,6 +138,7 @@ header   li  a:hover {
 .nav-icon{
   display: none;
 }
+
 .title{
   text-align: center;
   margin-top: 100px;
@@ -255,6 +256,8 @@ footer img{
 }
 .icon-menu{
   width: 250px;
+  margin-right: 50px;
+  margin-top: 20px;
 }
 
 .container-display-flex-nowrap{
@@ -294,10 +297,7 @@ footer img{
 }
 
 
-.icon-menu{
-  margin-right: 50px;
-  margin-top: 20px;
-}
+
 /*1200pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 1200px) {
   .parent{
@@ -379,12 +379,12 @@ footer img{
   }
   .row {
     display: flex;
+    justify-content: space-between;
     
     /*換行*/
   }
 
   .flex-space-between {
-    justify-content: space-between;
     position: relative;
   }
   header h1{
@@ -392,12 +392,20 @@ footer img{
     line-height: 250px;
   margin-top: 120px;
   }
+  .header{
+    position: relative;
+
+  }
   .nav2{
+    display: none;
     width: 60%;
     position: absolute;
     top: 80px;
     right: 0;
     background-color: #F7E5B4;
+}
+.nav2.active{
+  display: block;
 }
 
 .nav2> ul {
@@ -408,6 +416,7 @@ footer img{
   text-align: center;
   border-bottom: 1px solid #bdb3a7;
   padding: 20px 0;
+  
 }
 header > .container .nav2 > ul > li > a {
   display: block;

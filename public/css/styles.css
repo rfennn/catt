@@ -223,12 +223,15 @@ header   li  a:hover {
   border-radius: 5px;
   margin:20px auto;
 }
+.mg-top{
+  margin-top: 50px;
+}
 .choose{
-  width: 100%;
+  width: 200px;
   margin: auto;
   text-align: center;
   margin-bottom: 50px;
-  margin-top: 20px;
+  
   
 }
 .footer{

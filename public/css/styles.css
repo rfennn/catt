@@ -105,8 +105,8 @@ nav.active {
 nav.active img{
   position: fixed;
   top: 0px;
-  left: 50px;
-  width: 250px;
+  left: 5%;
+  width: 150px;
   height: 80px;
 }
 nav.active a{
@@ -178,47 +178,50 @@ header   li  a:hover {
 .list2{
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .wedo>h1{
   font-size: 36px;
   color: #E3767E;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20%;
   
 }
 .wedo>p{
   text-align: center;
   font-size: 20px;
+  margin-top: 10%;
 }
 .we-can-do1{
   background-image: url(../images/we-can-do1.svg);
-  width: 100%;
+  width: 300px;
   height: 250px;
-  /* height: 300px; */
-  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
+  border-radius: 5px;
+  margin: 20px auto ;
+  
 }
 .we-can-do2{
   background-image: url(../images/we-can-do2.svg);
-  width: 100%;
+  width: 300px;
   height: 250px;
-  background-size: contain;
+  /* background-size: 100%; */
   background-position: center;
   background-repeat: no-repeat;
-
+  border-radius: 5px;
+  margin:20px auto;
 }
 .we-can-do3{
   background-image: url(../images/we-can-do3.svg);
-  width: 100%;
+  width: 300px;
   height: 250px;
-  background-size: contain;
+  /* background-size: 100%; */
   background-position: center;
-
   background-repeat: no-repeat;
-
+  border-radius: 5px;
+  margin:20px auto;
 }
 .choose{
   width: 100%;
@@ -360,6 +363,9 @@ footer img{
   header ul{
   display: flex ;
 }
+.display-md-none {
+  display: none;
+}
 
 }
 @media (max-width: 768px) {
@@ -411,6 +417,8 @@ footer img{
 .nav2> ul {
   display: block;
   margin-left: 0px;
+  margin-top: 80px;
+  background-color: #fcedd0;
 }
 .nav2 > ul > li {
   text-align: center;
@@ -470,7 +478,7 @@ header > .container .nav2 > ul > li > a {
   }
   .linear h3{
     font-size: 25px;
-    top: 50%;
+    top: 46%;
   }
   .linear p{
     font-size: 12px;
@@ -502,12 +510,12 @@ header > .container .nav2 > ul > li > a {
   }
   
   .linear h3{
-    font-size: 20px;
-    top: 25%;
+    font-size: 18px;
+    top: 18%;
   }
   .linear p{
     font-size: 15px;
-    margin-top: 80px;
+    margin-top: 60px;
     }
   
   

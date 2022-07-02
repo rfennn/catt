@@ -90,7 +90,7 @@ header h1{
 /* **************nav************** */
 
 .nav1 img{
-  width: 12%;
+  width: 17vw;
   display: block;
   margin: 0 auto;
 }
@@ -165,7 +165,6 @@ header   li  a:hover {
   color: #373737;
   text-align: center;
   font-weight: bold;
-  margin-top: 20px;
 }
 /* **************我們可以做的事************** */
 
@@ -220,7 +219,8 @@ header   li  a:hover {
 /* **************為什麼選擇************** */
 
 .mg-top{
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .choose{
   width: 200px;
@@ -295,7 +295,7 @@ footer img{
 
 
 
-/*1200pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*1200pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 1200px) {
   /* **************封面圖************** */
   .parent{
@@ -303,6 +303,11 @@ footer img{
   }
   header a {
     font-size: 18px;
+  }
+  header h1{
+    line-height: 220px;
+    margin-top: 150px;
+    font-size: 48px;
   }
   .icon-menu {
     display: none;
@@ -345,17 +350,22 @@ footer img{
   margin-left: 150px;
 }
 .linear h3{
-  font-size: 38px;
-  top: 40%;
+  font-size: 3vw;
+  top: 10vw;
 }
 .linear p{
-  font-size: 17px;
+  font-size: 2vw;
   }
 .footer li{
   margin: 0 10px;
 }
 .footer a{
   font-size: 14px;
+}
+.col-md-6 {
+  --num: calc(12 / 6);
+  width: calc(100% / var(--num) - 20px);
+  margin: 30px 10px 0px 10px;
 }
 }
 /*768pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
@@ -384,6 +394,10 @@ nav.active {
   justify-content: space-around;
   align-items:center;
 }
+.linear p{
+  margin-top: 20px;
+
+}
 }
 /*768pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 768px) {
@@ -411,8 +425,8 @@ nav.active {
   }
   header h1{
     font-size: 36px;
-    line-height: 250px;
-  margin-top: 120px;
+    line-height: 270px;
+  margin-top: 90px;
   }
   .header{
     position: relative;
@@ -450,13 +464,16 @@ nav.active {
     height: 150px;
   }
   .linear h3{
-    font-size: 25px;
-    top: 46%;
+    font-size: 4vw;
+    top: 7.5vw;
   }
   .linear p{
-    font-size: 12px;
-    margin-top: 10px;
+    font-size: 1.5vw;
+    margin-top: 15.5vw;
     }
+    .nav1 img{
+      width: 25vw;
+}    
 .nav2{
   display: none;
   width: 60%;
@@ -494,6 +511,9 @@ text-align: center;
 border-bottom: 1px solid #bdb3a7;
 padding: 10px 0;
 
+}
+.nav2 > ul > li:last-child{
+  border-bottom: none;
 }
 header > .container .nav2 > ul > li > a {
 display: block;
@@ -551,6 +571,7 @@ footer img{
   
   
 }
+}
 /*480pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 480px) {
   .parent{
@@ -559,8 +580,8 @@ footer img{
   
   header h1{
     font-size: 28px;
-    line-height: 210px;
-  margin-top: 80px;
+    line-height: 180px;
+  margin-top: 50px;
   }
   .child3{
     width: 50%;
@@ -573,12 +594,12 @@ footer img{
   }
   
   .linear h3{
-    font-size: 18px;
-    top: 18%;
+    font-size: 4vw;
+    top: 5vw;
   }
   .linear p{
-    font-size: 15px;
-    margin-top: 60px;
+    font-size: 2vw;
+    margin-top: 12vw;
     }
   
   

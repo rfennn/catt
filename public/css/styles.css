@@ -12,6 +12,7 @@ body{
   max-width: 1140px;
   
 }
+
 ul{
 list-style-type: none;
 }
@@ -129,7 +130,9 @@ header   li  a:hover {
 .nav-icon{
   display: none;
 }
-
+.header{
+  display: none;
+}
 /* **************目前現況************** */
 .title{
   text-align: center;
@@ -342,7 +345,9 @@ footer img{
     right:-50px;
     bottom:-20px;
   }
-  
+  .header{
+    display: none;
+  }
   
 }
 @media (max-width: 1060px) {
@@ -430,8 +435,10 @@ nav.active {
   }
   .header{
     position: relative;
+    }
 
-  }
+  
+  
   .child1{
     width: 60%;
     height: 50%;
@@ -568,10 +575,12 @@ footer img{
 }
 .container-display-flex-nowrap ul{
   display: none ;
-  
-  
+}
+  .header{
+  display: none;
 }
 }
+
 /*480pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 480px) {
   .parent{
@@ -608,7 +617,115 @@ footer img{
 }
 
 
-@media (max-width: 768px) {
+/* **************************************about-us*************************************** */
+/* **************************************about-us*************************************** */
+/* **************************************about-us*************************************** */
+
+/* ****************nav********************* */
+.displayopen.active {
+  top: 0px;
+  right: 0px;
+  justify-content: space-around;
+}
+.displayopen{
+  height: 80px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: #FFF2F2;
+  z-index: 10;
+  display: block;
+  top: 0;
+}
+/* ****************橫幅********************* */
+.bg-img{
+  background-image: url(../images/abousus-bg.svg);
+  background-size: cover;
+  display: block;
+  position: relative;
+  max-width: 100%;
+  margin-top: 45px;
+  height: 44vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.aboutus-blob{
+  background-image: url(../images/abousus-vector.svg);
+  background-size: contain;
+  width: 32%;
+  height: 28vw;
+  position: absolute ;
+  left: 15%;
+  top: 20%;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.aboutus-blob>h2{
+  margin-top: 13%;
+  text-align: center;
+  color: #EF6735;
+  /* margin-bottom: 5%; */
+  font-size: 2.5vw;
+}
+.aboutus-blob>p{
+  margin: 5% 10%;
+  font-size: 1.4vw;
+}
+/* ****************認識貓月貓日********************* */
+section>h3{
+  text-align: center;
+  color: #676767;
+}
+section>p{
+  margin-top: 24px;
+  text-align: center;
+}
+section>.list2>img{
+  width: 50%;
+}
+.padding-aboutus{
+  padding: 100px 0;
 
 }
+section>.list2 h5{
+  text-align: center;
+  padding-top: 80px;
+}
+@media (max-width: 1200px) {
+  /* ****************橫幅********************* */
+  .bg-img{
+    height:43vw ;
+    margin-top: 65px;
+  }
+  .aboutus-blob{
+    width: 350px;
+    height: 280px;
+    align-items: center;
+    top: 15%;
+    left: 10%;
+  }
+  .aboutus-blob>p{
+    margin: 4% 15%;
+    font-size: 1.1vw;
 
+  }
+}
+@media (max-width: 768px) {
+  /* ****************橫幅********************* */
+  .bg-img{
+    height:60vw ;
+    margin-top: 75px;
+  }
+  .aboutus-blob{
+    width: 40vw;
+    height: 35vw;
+    top: 20%;
+    left: 10%;
+  }
+  .aboutus-blob>p{
+    margin: 4% 15%;
+    font-size:3px;
+
+  }
+}

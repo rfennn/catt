@@ -136,11 +136,12 @@ header   li  a:hover {
 /* **************目前現況************** */
 .title{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 80px;
   color: #EF6735;
   margin-bottom: 20px;
 
 }
+
 .list{
   display: flex;
   width: 100%;
@@ -163,6 +164,7 @@ header   li  a:hover {
   left: 0%;
   top: 50%;
 }
+
 .linear p{
   font-size: 23px;
   color: #373737;
@@ -348,11 +350,16 @@ footer img{
   .header{
     display: none;
   }
-  
+  .linear {
+    height: 240px;
+  }
 }
 @media (max-width: 1060px) {
 .nav2 {
   margin-left: 150px;
+}
+.linear {
+  height: 19vw;
 }
 .linear h3{
   font-size: 3vw;
@@ -666,7 +673,7 @@ footer img{
   text-align: center;
   color: #EF6735;
   /* margin-bottom: 5%; */
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 .aboutus-blob>p{
   margin: 5% 10%;
@@ -683,14 +690,32 @@ section>p{
 }
 section>.list2>img{
   width: 50%;
+  height: 100%;
 }
 .padding-aboutus{
   padding: 100px 0;
+  width: 100%;
+  align-items: center;
+}
+section>.list2 h4{
+  text-align: center;
+}
+div .center{
+  width: 40%;
+  margin-left: 10%;
+}
+.bg-aboutus{
+  background-color: #FFF2F2;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+  color:#EF6735;
 
 }
-section>.list2 h5{
-  text-align: center;
-  padding-top: 80px;
+.center p{
+  margin-top: 30px;
+  padding: 0 40px;
 }
 @media (max-width: 1200px) {
   /* ****************橫幅********************* */
@@ -718,14 +743,60 @@ section>.list2 h5{
     margin-top: 75px;
   }
   .aboutus-blob{
-    width: 40vw;
-    height: 35vw;
-    top: 20%;
+    width: 35vw;
+    height: 30vw;
+    top: 25%;
     left: 10%;
   }
   .aboutus-blob>p{
-    margin: 4% 15%;
-    font-size:3px;
+    margin: 1% 10%;
+      font-size: 2vw;
+      transform : scale(0.83,0.83);
+      *font-size: 10px;
+  }
+  /* ****************認識貓月貓日********************* */
+  .none768{
+    display: none;
+  }
+  .padding-aboutus{
+    flex-direction: column;
+    align-items: center;
+  }
+  div .center{
+    margin-top: 50px;
+    width: 100%;
+    margin-left: 0;
+  }
 
   }
+  @media (max-width: 480px) {
+    .aboutus-blob>p{
+        font-size: 12px;
+        transform : scale(0.83,0.83);
+        *font-size: 10px;
+
+    }
+  }
+  /* **************************************認養*************************************** */
+/* **************************************認養*************************************** */
+/* **************************************認養*************************************** */
+.parent2{
+  /* height: 650px; */
+  padding-bottom: 12%;
+  height: 520px;
+  background: #FFF2F2;
+  position: relative;
+  overflow: hidden;
+}
+.parent2::after{
+  position: absolute;
+  content:'';
+  bottom:0;
+  left:0;
+  width: 100%;
+  padding-bottom: 8%;
+  background-image:url(../images/header3.png) ;
+  background-size: 100%;
+  /* background-color: antiquewhite; */
+  z-index: 1;
 }

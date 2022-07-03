@@ -7,7 +7,7 @@
     <title>貓月貓日</title>
     <link rel="stylesheet" href="public/css/styles.css">
   </head>
-  <body onload="load()">
+  <body>
     <header> 
         
         <div class="parent">
@@ -62,15 +62,15 @@
       <h1 class="title">目前現況</h1>
       <div class="list">
         <div class="linear ">
-          <h3 id='0101'>12,200</h3>
+          <h3>12,200</h3>
           <p>全台流浪貓大約數量</p>
         </div>
         <div class="linear ">
-          <h3 id='0102'>5200</h3>
+          <h3>5200</h3>
           <p>公立收容所收養數量</p>
         </div>
         <div class="linear ">
-          <h3 ><span id='0103'></span>%</h3>
+          <h3>152%</h3>
           <p>台北收容所可收容比例</p>
         </div>
 
@@ -165,49 +165,7 @@
   <script src="public/js/catt-script.js">
 
   </script>
- <script>
-  function animate(obj, initVal, lastVal, duration) {
-    let startTime = null;
-    // 取得現在時間戳 (currentTime)
-    let currentTime = Date.now();
-    // 傳送現在時間至step function
-    const step = (currentTime) => {
-        // 指派開始時間
-        if (!startTime) {
-            startTime = currentTime ;
-        }
-
-        // 計算顯示數值
-        const progress = Math.min((currentTime - startTime) / duration, 1);
-
-        // 用progress計算顯示內容
-        obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
-
-        // 檢查是否是最後的數值
-        if (progress < 1) {
-            window.requestAnimationFrame(step);
-        }
-        else{
-            window.cancelAnimationFrame(window.requestAnimationFrame(step));
-        }
-    };
-
-    // 開始顯示動畫
-    window.requestAnimationFrame(step);
-}
-
-// 取得要進行數字動畫的網頁元素 (利用ID搜尋)
-let text1 = document.getElementById('0101');
-let text2 = document.getElementById('0102');
-let text3 = document.getElementById('0103');
-
-// 設定 起始值 結束值 持續時間
-const load = () => {
-    animate(text1, 0, 12200, 3000);
-    animate(text2, 0, 5200, 2500);
-    animate(text3, 0, 152, 2000);
-}
- </script>
+ 
 
   </body>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pparent{
+            width: 800px;
+            /* height: 540px; */
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .ccild{
+            width: 3000px;
+            font-size: 0;
+        }
+        .pparent img{
+            width: 800px;
+        }
+        .left-arrow, .right-arrow{
+            position: absolute;
+            cursor: pointer;
+            /* background-color: lightblue; */
+            width: 40px;
+            height: 100%;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+
+        }
+        .left-arrow{
+            left: 0;
+        }
+        .right-arrow{
+            right: 0;
+        }
+        .indicator{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .indicator>li{
+            width: 10px;
+            height: 10px;
+            background-color: lightgrey;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .indicator>li:last-child{
+            margin-right: 0;
+        }
+        .indicator>li.active{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="pparent">
+        <div class="ccild">
+            <img src="public/images/abousus-bg.svg"alt="">
+            <img src="public/images/abousus-bg2.svg"alt="">
+            <img src="public/images/abousus-bg3.svg"alt="">
+        
+        </div>
+        <div class="left-arrow"><</div>
+        <div class="right-arrow">></div>
+        <ol class="indicator">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        let currentLeftNum = 0
+        $('.right-arrow').on('click',function(){
+            if( currentLeftNum == -1600){
+                //假如currentLeftNum = 0執行這段
+            }else{
+            currentLeftNum = currentLeftNum - 800
+            console.log(currentLeftNum)
+            $('.ccild').animate({'margin-left':currentLeftNum})
+            }
+        })
+        $('.left-arrow').on('click',function(){
+            if( currentLeftNum == 0){
+                //假如currentLeftNum = 0執行這段
+            }else{
+                currentLeftNum = currentLeftNum + 800
+                // console.log(currentLeftNum)
+                $('.ccild').animate({'margin-left':currentLeftNum})
+            }
+        })
+
+        $('.indicator>li').on('click',function(){
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+        })
+
+    </script>
+</body>
+</html>

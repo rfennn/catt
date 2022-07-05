@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貓月貓日|會員專區</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+
+</head>
+<body>
+    <!-- 頁首*********************************************** -->
+    <header>
+        <div class="container displayopen ">
+            <nav class="active ">
+                <div class="row flex-space-between ">
+                    <a href="index.html"><img src="public/images/logo2.svg"></a>
+                    <a class="nav-icon display-md-none" id="btn-nav-switch" href="javascript:;"></a>
+                    <nav class="nav2">
+
+                        <ul>
+                            <li><a href="about-us.html">關於我們</a></li>
+                            <li><a href="adopt.html">認養</a></li>
+                            <li><a href="about-me.html">助糧</a></li>
+                            <li><a href="login.html">會員專區</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    <div class="parent3"></div>
+    </header>
+    <!-- 會員*********************************************** -->
+    <div class="color">
+            <div class="tab-link">
+                <a href="#tab1" class="active">登入</a>
+                <a href="#tab2">註冊</a>
+            </div>
+                <div id="tab1" class=" tab-content active">
+                    <form class="form " action="javascript:;">
+                        <div class="input-group ">
+                            <label for="account">帳號</label>
+                            <input type="text" id="account">
+                        </div>
+                        <div class="input-group ">
+                            <label for="password">密碼</label>
+                            <input type="password" id="password">
+                            <!-- <div class="input-group"> -->
+                                <div class="w-48 input-group">
+                                <input type="checkbox" name="">記住帳號 
+                                </div>
+                            <input class="input-group" type="submit"  value="登入">
+                        </div>
+                        </form>
+                    
+                    </div>
+                <div id="tab2" class="tab-content">
+                    <form class="form " action="javascript:;">
+                        <div class="input-group ">
+                            <label for="account">設定帳號</label>
+                            <input type="text" id="account">
+                        </div>
+                        <div class="input-group ">
+                            <label for="password">設定密碼</label>
+                            <input type="password" id="password">
+                            <!-- <div class="input-group"> -->
+                                
+                            <input class="input-group" type="submit"  value="註冊">
+                        </div>
+                        </form>
+                     
+            </div>
+              
+    </div>
+    <div class="login-img"><img  src="public/images/login-cat.svg" ></div> 
+
+
+
+<!-- 頁尾*********************************************** -->
+    <footer>
+        <div class="footer2">
+            <div class="footer-block">
+                <div class="container-display-flex-nowrap">
+                    <a href="" class="logo"><img src="public/images/logo1.png"></a>
+                    <ul>
+                        <li><a href="about-us.html">關於我們</a></li>
+                        <h2>|</h2>
+                        <li><a href="adopt.html">認養</a></li>
+                        <h2>|</h2>
+                        <li><a href="about-me.html">助糧</a></li>
+                        <h2>|</h2>
+                        <li><a href="login.html">會員專區</a></li>
+                    </ul>
+                    <a href="" class="icon-menu"><img src="public/images/fb-ig-em-icon.svg"></a>
+                </div>
+            </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $('.tab-link>a').on('click', function(e){
+            e.preventDefault()
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+            console.log($(this).attr('href'))
+            $( $(this).attr('href') ).addClass('active')
+            $( $(this).attr('href') ).siblings().removeClass('active')
+        })//.tab-link>a end
+        
+        </script>
+        <script src="public/js/catt-script.js">
+    
+        </script>
+</body>
+</html>

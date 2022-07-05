@@ -137,9 +137,10 @@ header   li  a:hover {
 .title{
   text-align: center;
   margin-top: 80px;
+  padding-bottom: 30px;
   color: #EF6735;
-  margin-bottom: 20px;
-
+  margin-bottom: 10px;
+  
 }
 
 .list{
@@ -443,9 +444,6 @@ nav.active {
   .header{
     position: relative;
     }
-
-  
-  
   .child1{
     width: 60%;
     height: 50%;
@@ -799,4 +797,296 @@ div .center{
   background-size: 100%;
   /* background-color: antiquewhite; */
   z-index: 1;
+}
+.mg-title{
+  margin-top: -5px;
+  margin-bottom: 0;
+}
+.plan-bg{
+  background-image: url(../images/adopt-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+
+}
+.plan-bg>p{
+  padding: 0 9vw;
+  padding-top: 3vw;
+  font-size: 1.2vw;
+}
+.plan-bg h4{
+  padding-left: 9vw;
+  padding-right: 9vw;
+  font-size: 1.3vw;
+
+}
+.plan-bg .adopt-p-top{
+  padding-top: 5vw;
+}
+.adopt-pd{
+  padding-top: 4vw;
+
+}
+.plan-bg .h4-color{
+  color: #E3767E;
+  padding-top: 1.5vw ;
+}
+.adopt-img{
+  width: 40%;
+  margin: 0 5%;
+}
+.adopt-p{
+  width: 40%;
+  margin:0 5%;
+  margin-top: 50px;
+}
+.adopt-p h3{
+  margin-bottom: 20px;
+  color: #E3767E;
+}
+.adopt-p a{
+  margin-top: 50px;
+  display: block;
+  padding: 10px;
+  background-color: #EF6735;
+  color: #FFFFFF;
+  width: 150px;
+  border-radius: 8px;
+  text-align: center;
+}
+.adopt-bottom{
+  padding-bottom: 5vw;
+}
+.even{
+  margin-top: 80px;
+}
+.order-md-1{
+  order:-1;
+}
+@media (max-width: 768px) {
+  .adopt-img{
+    width: 100%;
+    margin: 0;
+  }
+  .adopt-p{
+    width: 100%;
+  }
+  .order-md-1{
+    order:0;
+  }
+  .adopt-p{
+    text-align: center;
+  }
+  .adopt-p a{
+    margin: 20px auto;
+  }
+}
+
+  /* **************************************會員專區*************************************** */
+/* **************************************會員專區*************************************** */
+/* **************************************會員專區*************************************** */
+/* ***********************頁首************************** */
+.parent3{
+  /* height: 650px; */
+  padding-bottom: 54%;
+  background: #FFF2F2;
+  position: relative;
+  overflow: hidden;
+  z-index: -100;
+
+}
+.parent3::after{
+  position: absolute;
+  content:'';
+  bottom:0;
+  left:0;
+  width: 100%;
+  padding-bottom: 48%;
+  background-image:url(../images/nav.svg) ;
+  background-size: 100%;
+  /* background-color: antiquewhite; */
+  z-index: -88;
+}
+
+
+.color{
+  width: 370px;
+  height: 500px;
+  margin-top: -40%;
+  margin-left: 8%;
+  z-index: 10;
+}
+
+.tab-link{
+  display: flex;
+  width: 100%;
+}
+.tab-link>a{
+  text-decoration: none;
+  width: 48%;
+  margin:1%;
+  line-height: 40px;
+  color:white;
+  text-align: center;
+  display: block;
+  background-color: lightgray;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-link>a.active{
+  background-color: #EF6735;
+}
+.tab-content{
+  display: none;
+}
+.tab-content.active{
+  display: block;
+}
+input {
+  border: none;
+  border-radius: 4px;
+  border: 1px solid gray;
+  line-height: 30px;
+  
+}
+label{
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+input[type=text] {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #ef67358c;
+
+}
+input[type=password] {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #ef67358c;
+}
+input[type=checkbox] {
+  margin-right: 10px;
+}
+
+.input-group{
+  margin:0 5%;
+  margin-top: 20px;
+}
+input[type=submit] {
+  width: 50%;
+  height: 40px;
+  transform: translateX(40%);
+  color: white;
+  font-weight: 500;
+  border: none;
+  background-color: #EF6735;
+  margin-top: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  
+
+}
+.login-img{
+  width: 100%;
+  /* right: 0; */
+  background-color: #551E1E;
+  position: relative;
+}
+.login-img img{
+  display: block;
+  position: absolute;
+  right: 5%;
+  height: 80px;
+  margin-top: -80px;
+}
+/* ***********************footer************************** */
+.footer2{
+  /* height: 650px; */
+  padding-top: 8%;
+  background: #F7E5B4;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 1060px) {
+  
+  .footer2 li{
+    margin: 0 10px;
+  }
+  .footer2 a{
+    font-size: 14px;
+  }
+  }
+  @media (max-width: 768px) {
+    .color{
+      margin:0 auto;
+      margin-top: -30%;
+    }
+    .login-img img{
+      margin-top: -80px;
+      right: 10% ;
+    }
+  }
+
+    /* **************************************助糧*************************************** */
+/* **************************************助糧*************************************** */
+/* **************************************助糧*************************************** */
+.eat-bg{
+  width: 100%;
+  height: 550px;
+  background-color: #FFF2F2;
+}
+.eat-mg{
+  margin: 0 130px;
+}
+.eat-bgclr{
+  background-color: #FFF2F2;
+  width: 100%;
+  margin-bottom: 36px;
+  border-radius: 8px;
+  padding: 25px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eat-bgclr>h3{
+  margin-left: 20px;
+}
+.eat-bgclr1{
+  background-color: #FFF2F2;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  padding: 25px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.eat-bgclr1>h3{
+  margin-left: 20px;
+}
+.eat-bgclr ul {
+  width: 100%;
+
+}
+.eat-bgclr ul li{
+  width: 33.333333%;
+  border-right:2px solid #D9D9D9;
+
+}
+.eat-bgclr ul li:last-child{
+  border-right: none;
+}
+.eat-bgclr ul h4{
+  color: #E3767E;
+  margin-bottom: 20px;
+}
+.arrow{
+  position: absolute;
+  margin-top: -60px;
+  right: 50%;
+  transform: translateX(30px);
 }

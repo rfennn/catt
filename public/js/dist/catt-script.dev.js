@@ -19,3 +19,5 @@ $(window).resize(function () {
     $('.header').toggleClass('active');
   }); // btn-nav-switch end
 }); // windowWidth>=768 end
+
+new WOW().init();

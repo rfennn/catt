@@ -23,3 +23,5 @@ $(window).resize(function(){
         
         
     })// windowWidth>=768 end
+
+    new WOW().init();

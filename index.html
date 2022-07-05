@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>貓月貓日</title>
+    <link rel="stylesheet" href="public/js/WOW-master/css/libs/animate.css">
     <link rel="stylesheet" href="public/css/styles.css">
   </head>
   <body onload="load()">
     <header> 
         
-        <div class="parent">
+        <div class="parent ">
           <h1>Cats are lovely too!</h1>
           <div class="child child1">
             <img src="public/images/cat4.png" style="width:100%";>
@@ -36,7 +37,7 @@
               <li><a href="about-us.html">關於我們</a></li>
               <li><a href="adopt.html">認養</a></li>
               <li><a href="about-me.html">助糧</a></li>
-              <li><a href="about-me.html">會員專區</a></li>
+              <li><a href="login.html">會員專區</a></li>
             </ul>
           </div>
         </nav>
@@ -51,14 +52,16 @@
                     <li><a href="about-us.html">關於我們</a></li>
                     <li><a href="adopt.html">認養</a></li>
                     <li><a href="about-me.html">助糧</a></li>
-                    <li><a href="about-me.html">會員專區</a></li>
+                    <li><a href="login.html">會員專區</a></li>
                   </ul>
                 </nav>
             </div>
           </nav>
         </div>
     </header>
-    <section class="container">
+    <div class="wow bounceInLeft">
+      <h1 style="text-align:center ;">123</h1></div>
+    <section class="container ">
       <h1 class="title">目前現況</h1>
       <div class="list">
         <div class="linear ">
@@ -133,7 +136,7 @@
               <h2>|</h2>
               <li><a href="about-me.html">助糧</a></li>
               <h2>|</h2>
-              <li><a href="about-me.html">會員專區</a></li>
+              <li><a href="login.html">會員專區</a></li>
             </ul>
             <a href="" class="icon-menu"><img src="public/images/fb-ig-em-icon.svg"></a>
           
@@ -162,41 +165,38 @@
           }
       }
   </script>
-  <script src="public/js/catt-script.js">
-
-  </script>
  <script>
-  function animate(obj, initVal, lastVal, duration) {
+   function animate(obj, initVal, lastVal, duration) {
     let startTime = null;
     // 取得現在時間戳 (currentTime)
     let currentTime = Date.now();
     // 傳送現在時間至step function
     const step = (currentTime) => {
-        // 指派開始時間
-        if (!startTime) {
-            startTime = currentTime ;
-        }
-
-        // 計算顯示數值
-        const progress = Math.min((currentTime - startTime) / duration, 1);
-
-        // 用progress計算顯示內容
-        obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
-
-        // 檢查是否是最後的數值
-        if (progress < 1) {
-            window.requestAnimationFrame(step);
-        }
-        else{
-            window.cancelAnimationFrame(window.requestAnimationFrame(step));
-        }
+      // 指派開始時間
+      if (!startTime) {
+        startTime = currentTime ;
+      }
+      
+      // 計算顯示數值
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      // 用progress計算顯示內容
+      obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+      
+      // 檢查是否是最後的數值
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+      else{
+        window.cancelAnimationFrame(window.requestAnimationFrame(step));
+      }
     };
-
+    
     // 開始顯示動畫
     window.requestAnimationFrame(step);
-}
-
-// 取得要進行數字動畫的網頁元素 (利用ID搜尋)
+  }
+  
+  // 取得要進行數字動畫的網頁元素 (利用ID搜尋)
 let text1 = document.getElementById('0101');
 let text2 = document.getElementById('0102');
 let text3 = document.getElementById('0103');
@@ -208,6 +208,7 @@ const load = () => {
     animate(text3, 0, 152, 2000);
 }
  </script>
-
+<script src="public/js/WOW-master/dist/wow.js"></script>
+  <script src="public/js/catt-script.js"></script>
   </body>
 </html>

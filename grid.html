@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* float */
+        .container{
+            margin: auto;
+            display: grid;
+            grid-template-columns: 80px 80px 80px 80px;
+            grid-template-columns: repeat(4, minmax(400px, 14%));
+            grid-auto-rows: 130px;
+            gap: 10px
+        }
+        .box1{
+            background-image: url(public/images/seemore-cat1.svg);
+            background-size: cover;
+            grid-column:1 / span 1;
+            grid-row:1 / span 4;
+        }
+        .box2{
+            background-image: url(public/images/seemore-cat2.svg);
+            grid-column:2 / span 1;
+            background-size: cover;
+            grid-row:1 / span 2;        }
+        .box3{
+            background-image: url(public/images/seemore-cat3.svg);
+            grid-column:2 / span 1;
+            grid-row:3 / span 2;  
+            background-size: cover;
+        }
+        .box4{
+            background-image: url(public/images/seemore-cat4.svg);
+            grid-column:3 / span 1;
+            grid-row:1 / span 4;  
+            background-size: cover;
+        }
+        .box5{
+            background-image: url(public/images/seemore-cat5.svg);
+            grid-column:4 / span 3;
+            grid-row:1 / span 4;  
+            background-size: cover;
+        }
+        .box6{
+            background-color: lightblue;
+        }
+        .box7{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <!-- <div class="box6">06</div> -->
+        <!-- <div class="box7">07</div> -->
+    </div>
+</body>
+</html>

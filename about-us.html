@@ -23,7 +23,7 @@
                         <ul>
                             <li><a href="about-us.html">關於我們</a></li>
                             <li><a href="adopt.html">認養</a></li>
-                            <li><a href="about-me.html">助糧</a></li>
+                            <li><a href="eat.html">助糧</a></li>
                             <li><a href="login.html">會員專區</a></li>
                         </ul>
                     </nav>
@@ -33,14 +33,21 @@
     </header>
     <!-- 輪播*********************************************** -->
     <section>
-        <div class="bg-img">
-            <div class="aboutus-blob">
-                <h2>空間寬大自由</h2>
-                <p>貓月貓日坐落在台北山區，佔地2,200坪，規劃了三個不同的貓咪生活空間: 長期醫療照護區、花園和獨立貓舍。<br></p>
-
-                <p class="none768">我們貓咪的生活品質，相對有充裕的空間四處活動、過著壓力較低的日子。</p>
+        <div class="pparent">
+            <div class="ccild">
+                <img src="public/images/abousus-bg.svg"alt="">
+                <img src="public/images/abousus-bg2.svg"alt="">
+                <img src="public/images/abousus-bg3.svg"alt="">
+            
             </div>
+            <div class="left-arrow"><</div>
+            <div class="right-arrow">></div>
+            <ol class="indicator">
+                <li class="active"></li>
+                
+            </ol>
         </div>
+    
 
     </section>
     <!-- 認識貓月貓日******************************************** -->
@@ -75,7 +82,7 @@
                         <h2>|</h2>
                         <li><a href="adopt.html">認養</a></li>
                         <h2>|</h2>
-                        <li><a href="about-me.html">助糧</a></li>
+                        <li><a href="eat.html">助糧</a></li>
                         <h2>|</h2>
                         <li><a href="login.html">會員專區</a></li>
                     </ul>
@@ -92,7 +99,89 @@
     <script src="public/js/catt-script.js">
 
     </script>
+    <script>
+        $('.ccild').prepend( $('.ccild>img').last().clone())
+        $('.ccild').append($('.ccild>img').eq(1).clone())
+        let currentLeftNum = 0//左邊位移的距離
+        let currentNum = 1//當前的數字
+        let parentWidth = $('.pparent').width()//父層寬度
+        let imgLength = $('.ccild>img').length//子層個數
+        let childTotalWitch = parentWidth * imgLength
+        
+        $('.ccild').css({'margin-left':-parentWidth * currentNum})
+        $('.ccild').width( childTotalWitch)//子層總寬 =父層寬度*子層個數
+        $('.ccild>img').width( parentWidth) //子層下的圖片寬=父層寬度
+        
+        $(window).on('load',function(){
+            $('.loading-overlay').addClass('active')
+            
+            parentWidth = $('.pparent').width()
+           childTotalWitch = parentWidth * imgLength
+           $('.ccild').css({'margin-left':-parentWidth * currentNum})
+           $('.ccild').width( childTotalWitch)
+           $('.ccild>img').width( parentWidth) 
+        })
 
+        for(let i = 0; i < imgLength-3;i++){
+            $('.indicator>li.active').after('<li></li>')
+        }
+
+        $(window).resize(function(){
+           parentWidth = $('.pparent').width()
+           childTotalWitch = parentWidth * imgLength
+           $('.ccild').css({'margin-left':-parentWidth * currentNum})
+           $('.ccild').width( childTotalWitch)
+           $('.ccild>img').width( parentWidth) 
+
+        })
+
+        $('.right-arrow').on('click',function(){
+            if( currentNum == imgLength - 1){
+
+            }else{
+            currentNum = currentNum + 1
+            console.log(currentNum)
+            common()
+            }
+        })
+        $('.left-arrow').on('click',function(){
+            if( currentNum == 0){
+
+            }else{
+                currentNum = currentNum - 1
+                common()
+                // console.log(currentLeftNum)
+            }
+        })
+
+        $('.indicator>li').on('click',function(){
+            //index()序列號 //eq()第幾個元素
+            currentNum = $(this).index() + 1
+            common()
+             // $(this).addClass('active')
+            // $(this).siblings().removeClass('active')
+        })
+
+        function common(){
+            $('.ccild').animate({'margin-left':-parentWidth * currentNum}, function(){
+                if(currentNum == imgLength - 1){
+                    currentNum = 1
+                }
+                if( currentNum == 0){
+                    currentNum = imgLength - 2
+                }
+                $('.ccild').css({'margin-left': -parentWidth * currentNum})
+                $('.indicator>li').eq(currentNum - 1).addClass('active')
+                $('.indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+            })
+
+
+        }
+        setInterval(function() {
+            $('.right-arrow').click()
+            
+        }, 3000)
+    </script>
 </body>
 
 </html>

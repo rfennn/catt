@@ -1,0 +1,129 @@
+html, body {
+  height: 100%;
+}
+
+* {
+  user-select: none;
+}
+
+body .buttom1 > input {
+  display: none;
+  margin-left: 50px;
+}
+body .buttom1 > input + div + div {
+  width: 300px;
+  margin-top: 10px;
+}
+body .buttom1 > input + div + div label {
+  display: block;
+  padding: 15px 10px;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 48%;
+  font-size: 18px;
+  color: #EF6735;
+  font-weight: bolder;
+  cursor: pointer;
+}
+body .buttom1 > input + div + div label:first-child {
+  color: #EF6735;
+  margin-right: 12px;
+  box-shadow: inset 0 0 0 3px #EF6735, 0 15px 15px -10px rgba(223, 73, 18, 0.375);
+}
+body .buttom1 > input#regular:checked ~ div + div label:first-child {
+  box-shadow: inset 0 0 0 3px #EF6735, 0 15px 15px -10px rgba(223, 73, 18, 0.375);
+}
+body .buttom1 > input#regular:checked ~ div + div label:last-child {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+body .buttom1 > input#single:checked ~ div + div label:first-child {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+body .buttom1 > input#single:checked ~ div + div label:last-child {
+  box-shadow: inset 0 0 0 3px #EF6735, 0 15px 15px -10px rgba(223, 73, 18, 0.375);
+}
+
+.buttom2 > input {
+  display: none;
+  margin-left: 50px;
+}
+.buttom2 > input + div + div {
+  width: 300px;
+  margin-top: 10px;
+}
+.buttom2 > input + div + div label {
+  display: block;
+  padding: 15px 10px;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 48%;
+  font-size: 18px;
+  color: #EF6735;
+  font-weight: bolder;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.buttom2 > input + div + div label:first-child {
+  color: #EF6735;
+  box-shadow: inset 0 0 0 3px #EF6735, 0 15px 15px -10px rgba(223, 73, 18, 0.375);
+}
+.buttom2 > input + div + div label:nth-child(odd) {
+  margin-right: 12px;
+}
+.buttom2 > input + div + div label:nth-child(even) {
+  float: none;
+}
+.buttom2 > input#NT300:checked ~ div + div label:nth-child(1) {
+  box-shadow: inset 0 0 0 3px #EF6735, 0 15px 15px -10px rgba(223, 73, 18, 0.375);
+}
+.buttom2 > input#NT300:checked ~ div + div label:nth-child(2) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT300:checked ~ div + div label:nth-child(3) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT300:checked ~ div + div label:nth-child(4) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT600:checked ~ div + div label:nth-child(3) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT600:checked ~ div + div label:nth-child(4) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT600:checked ~ div + div label:nth-child(1) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT600:checked ~ div + div label:nth-child(2) {
+  box-shadow: inset 0 0 0 3px #EF6735, 0 15px 15px -10px rgba(223, 73, 18, 0.375);
+}
+.buttom2 > input#NT1500:checked ~ div + div label:nth-child(3) {
+  box-shadow: inset 0 0 0 3px #EF6735, 0 15px 15px -10px rgba(223, 73, 18, 0.375);
+}
+.buttom2 > input#NT1500:checked ~ div + div label:nth-child(4) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT1500:checked ~ div + div label:nth-child(1) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT1500:checked ~ div + div label:nth-child(2) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT3000:checked ~ div + div label:nth-child(4) {
+  box-shadow: inset 0 0 0 3px #EF6735, 0 15px 15px -10px rgba(223, 73, 18, 0.375);
+}
+.buttom2 > input#NT3000:checked ~ div + div label:nth-child(1) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT3000:checked ~ div + div label:nth-child(2) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}
+.buttom2 > input#NT3000:checked ~ div + div label:nth-child(3) {
+  box-shadow: inset 0 0 0 0px #EF6735, 0 10px 15px -20px rgba(239, 103, 53, 0);
+}

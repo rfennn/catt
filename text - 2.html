@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            margin: 0;
+        }
         .pparent{
-            width: 800px;
+            width: 100%;
             /* height: 540px; */
             margin: auto;
             overflow: hidden;
             position: relative;
         }
         .ccild{
-            width: 3000px;
+            /* width: 3000px; */
             font-size: 0;
         }
         .pparent img{
@@ -63,9 +66,92 @@
         .indicator>li.active{
             background-color: orangered;
         }
+        .loading-overlay{
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top:0;
+            left: 0;
+            background-color: rgb(237, 212, 165);
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s all;
+            /* left: -50vw; */
+        }
+        .loading-overlay.active{
+            top: -100vh;
+            transition: .3s all;
+            transition-delay: 1s;
+        }
+        .spinner {
+   width: 44.8px;
+   height: 44.8px;
+   animation: spinner-y0fdc1 2s infinite ease;
+   transform-style: preserve-3d;
+}
+.spinner > div {
+   background-color: rgba(255,194,71,0.2);
+   height: 100%;
+   position: absolute;
+   width: 100%;
+   border: 2.2px solid #2e2615;
+}
+.spinner div:nth-of-type(1) {
+   transform: translateZ(-22.4px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+   transform: rotateY(-270deg) translateX(50%);
+   transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+   transform: rotateY(270deg) translateX(-50%);
+   transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+   transform: rotateX(90deg) translateY(-50%);
+   transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+   transform: rotateX(-90deg) translateY(50%);
+   transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+   transform: translateZ(22.4px);
+}
+
+@keyframes spinner-y0fdc1 {
+   0% {
+      transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+   }
+
+   50% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+   }
+
+   100% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+   }
+}
     </style>
 </head>
 <body>
+    <div class="loading-overlay">
+        
+        <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+    </div>
     <div class="pparent">
         <div class="ccild">
             <img src="public/images/abousus-bg.svg"alt="">
@@ -77,8 +163,7 @@
         <div class="right-arrow">></div>
         <ol class="indicator">
             <li class="active"></li>
-            <li></li>
-            <li></li>
+            
         </ol>
     </div>
 
@@ -86,31 +171,87 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        let currentLeftNum = 0
+        $('.ccild').prepend( $('.ccild>img').last().clone())
+        $('.ccild').append($('.ccild>img').eq(1).clone())
+        let currentLeftNum = 0//左邊位移的距離
+        let currentNum = 1//當前的數字
+        let parentWidth = $('.pparent').width()//父層寬度
+        let imgLength = $('.ccild>img').length//子層個數
+        let childTotalWitch = parentWidth * imgLength
+        
+        $('.ccild').css({'margin-left':-parentWidth * currentNum})
+        $('.ccild').width( childTotalWitch)//子層總寬 =父層寬度*子層個數
+        $('.ccild>img').width( parentWidth) //子層下的圖片寬=父層寬度
+        
+        $(window).on('load',function(){
+            $('.loading-overlay').addClass('active')
+            
+            parentWidth = $('.pparent').width()
+           childTotalWitch = parentWidth * imgLength
+           $('.ccild').css({'margin-left':-parentWidth * currentNum})
+           $('.ccild').width( childTotalWitch)
+           $('.ccild>img').width( parentWidth) 
+        })
+
+        for(let i = 0; i < imgLength-3;i++){
+            $('.indicator>li.active').after('<li></li>')
+        }
+
+        $(window).resize(function(){
+           parentWidth = $('.pparent').width()
+           childTotalWitch = parentWidth * imgLength
+           $('.ccild').css({'margin-left':-parentWidth * currentNum})
+           $('.ccild').width( childTotalWitch)
+           $('.ccild>img').width( parentWidth) 
+
+        })
+
         $('.right-arrow').on('click',function(){
-            if( currentLeftNum == -1600){
-                //假如currentLeftNum = 0執行這段
+            if( currentNum == imgLength - 1){
+
             }else{
-            currentLeftNum = currentLeftNum - 800
-            console.log(currentLeftNum)
-            $('.ccild').animate({'margin-left':currentLeftNum})
+            currentNum = currentNum + 1
+            console.log(currentNum)
+            common()
             }
         })
         $('.left-arrow').on('click',function(){
-            if( currentLeftNum == 0){
-                //假如currentLeftNum = 0執行這段
+            if( currentNum == 0){
+
             }else{
-                currentLeftNum = currentLeftNum + 800
+                currentNum = currentNum - 1
+                common()
                 // console.log(currentLeftNum)
-                $('.ccild').animate({'margin-left':currentLeftNum})
             }
         })
 
         $('.indicator>li').on('click',function(){
-            $(this).addClass('active')
-            $(this).siblings().removeClass('active')
+            //index()序列號 //eq()第幾個元素
+            currentNum = $(this).index() + 1
+            common()
+             // $(this).addClass('active')
+            // $(this).siblings().removeClass('active')
         })
 
+        function common(){
+            $('.ccild').animate({'margin-left':-parentWidth * currentNum}, function(){
+                if(currentNum == imgLength - 1){
+                    currentNum = 1
+                }
+                if( currentNum == 0){
+                    currentNum = imgLength - 2
+                }
+                $('.ccild').css({'margin-left': -parentWidth * currentNum})
+                $('.indicator>li').eq(currentNum - 1).addClass('active')
+                $('.indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+            })
+
+
+        }
+        setInterval(function() {
+            $('.right-arrow').click()
+            
+        }, 3000)
     </script>
 </body>
 </html>

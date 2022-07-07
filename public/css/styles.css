@@ -1369,6 +1369,7 @@ border-radius: 8px 0 0 8px;
 }
 .eat-title{
   color: #E3767E;
+  margin-top: 30px;
 }
 .flex-between{
   display: flex;
@@ -1378,9 +1379,18 @@ border-radius: 8px 0 0 8px;
 .flex-between h3{
   color: #EF6735;
 }
+.large{
+  overflow:hidden
+}
+
+.large img:hover{
+  transform: scale(1.1);
+  transition:all 0.5s ease 0s;
+}
 .no-wrap{
   display: flex;
   width: 100%;
   overflow: scroll;
   overflow-y: hidden;
 }
+

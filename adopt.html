@@ -6,31 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>貓月貓日|認養</title>
     <link rel="stylesheet" href="public/css/styles.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <!-- slick theme css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+        .slick-prev:before {
+            color: #ef6735;
+        font-size: 50px;}
+        .slick-next:before{
+            color: #ef6735;
+        font-size: 50px;
+        margin-left: -20px;   
+         }
+        </style>
 </head>
 <body>
     <!-- 頁首*********************************************** -->
     <header>
-        <div class="parent2">
-            <div class="container displayopen ">
-                <nav class="active ">
-                    <div class="row flex-space-between ">
-                        <a href="index.html"><img src="public/images/logo2.svg"></a>
-                        <a class="nav-icon display-md-none" id="btn-nav-switch" href="javascript:;"></a>
-                        <nav class="nav2">
+        <div class="container displayopen ">
+            <nav class="active ">
+                <div class="row flex-space-between ">
+                    <a href="index.html"><img src="public/images/logo2.svg"></a>
+                    <a class="nav-icon display-md-none" id="btn-nav-switch" href="javascript:;"></a>
+                    <nav class="nav2">
 
-                            <ul>
-                                <li><a href="about-us.html">關於我們</a></li>
-                                <li><a href="adopt.html">認養</a></li>
-                                <li><a href="eat.html">助糧</a></li>
-                                <li><a href="login.html">會員專區</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </nav>
-            </div>
+                        <ul>
+                            <li><a href="about-us.html">關於我們</a></li>
+                            <li><a href="adopt.html">認養</a></li>
+                            <li><a href="eat.html">助糧</a></li>
+                            <li><a href="login.html">會員專區</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
         </div>
     </header>
+ <!-- 輪播*********************************************** -->
+ <div class="container3">
+    <div class="slider center">       
+        <div class="slide">
+          <div class="cl cl-yellow"></div>
+        </div>
+        <div class="slide">
+          <div class="cl cl-blue"></div>
+
+        </div>
+        <div class="slide">
+          <div class="cl cl-red"></div>
+        </div>
+      <div class="slide">
+          <div class="cl cl-yellow"></div>
+        </div>
+        <div class="slide">
+          <div class="cl cl-blue"></div>
+        </div>
+        <div class="slide">
+          <div class="cl cl-red"></div>
+        </div>
+    </div>
+    <a href="see-more.html">看更多</a>
+</div>
     <!-- 認養計畫*********************************************** -->
     <h2 class="title mg-title">不能養寵物卻想要自己的貓嗎?</h2>
     <h2 class="title mg-title">歡迎加入認養計畫!</h2>
@@ -104,7 +140,7 @@
         <div class="footer">
             <div class="footer-block">
                 <div class="container-display-flex-nowrap">
-                    <a href="" class="logo"><img src="public/images/logo1.png"></a>
+                    <a href="index.html" class="logo"><img src="public/images/logo1.png"></a>
                     <ul>
                         <li><a href="about-us.html">關於我們</a></li>
                         <h2>|</h2>
@@ -125,5 +161,49 @@
     <script src="public/js/catt-script.js">
 
     </script>
+
+     <!-- jquery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <!-- slick js -->
+     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <!-- 自定義 js -->
+     <script>
+        var $st = $('.pagination');
+ var $slickEl = $('.center');
+ 
+ $slickEl.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+   var i = (currentSlide ? currentSlide : 0) + 1;
+   $st.text(i + ' of ' + slick.slideCount);
+ });
+ 
+ $slickEl.slick({
+   centerMode: true,
+   centerPadding: '50px',
+   slidesToShow: 3,
+   focusOnSelect: true,
+   dots: false,
+   infinite: true,
+   responsive: [
+     {
+       breakpoint: 768,
+       settings: {
+         arrows: false,
+         centerMode: true,
+         centerPadding: '20px',
+         slidesToShow: 3
+       }
+     },
+     {
+       breakpoint: 480,
+       settings: {
+         arrows: false,
+         centerMode: true,
+         centerPadding: '20px',
+         slidesToShow: 1
+       }
+     }
+   ]
+ });
+     </script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <!-- slick theme css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        body{
+            background-color: rgb(119, 99, 73);
+        }
+        .banner{
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+        .banner img{
+            margin: 10px;
+            width: 580px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="banner">
+        <img src="public/images/abousus-bg.svg" alt="" style="width: 588px">
+        <img src="public/images/abousus-bg2.svg" alt="">
+        <img src="public/images/abousus-bg3.svg" alt="">
+        <img src="public/images/abousus-bg.svg" alt="">
+        <img src="public/images/abousus-bg2.svg" alt="">
+        <img src="public/images/abousus-bg3.svg" alt="">
+
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- slick js -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 自定義 js -->
+    <script>
+        $('.banner').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});
+    </script>
+
+</body>
+</html>

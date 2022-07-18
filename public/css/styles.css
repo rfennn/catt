@@ -23,7 +23,7 @@ a {
 /* **************封面圖************** */
 .parent{
   /* height: 650px; */
-  padding-bottom: 12%;
+  padding-bottom: 15%;
   background: #FFF2F2;
   position: relative;
   overflow: hidden;
@@ -44,50 +44,65 @@ header h1{
   color: #E3767E;
   font-size: 52px;
   text-align: center;
-  line-height: 180px;
-  margin-top: 200px;
+  line-height: 170px;
+  margin-top: 230px;
+  font-weight: bolder;
 }
 
 .child{
   position: absolute;
-  /* width:300px;
-  height: 200px; */
-  /* background: lightblue; */
+}
+.child1:hover{
+  transform:rotate(125deg) scale(1.2);
+  transition:all 0.5s ease 0s;
+}
+.child2:hover{
+  transform:rotate(-180deg) scale(1.2);
+  transition:all 0.5s ease 0s;
+}
+.child3:hover{
+  transform:rotate(-125deg) scale(1.2);
+  transition:all 0.5s ease 0s;
+}
+.child4:hover,.child5:hover{
+  transform: scale(1.2);
+  transition:all 0.5s ease 0s;
 }
 .child1{
-  width: 40%;
-  height: 50%;
-  left:-120px;
-  top:-40px;
+  width: 340px;
+  height: 340px;
+  left:-50px;
+  top:-60px;
   transform:rotate(125deg);
 }
 
 .child2{
-  width: 25%;
-  height: 60%;
-  left:38%;
-  top:-120px;
+  width: 300px;
+  height: 300px;
+  left:42%;
+  top:-50px;
   transform:rotate(-180deg);
 }
 
 .child3{
-  width: 35%;
-  height: 80%;
-  right:-150px;
-  top:-200px;
+  width: 370px;
+  height: 370px;
+  right:-80px;
+  top:-40px;
   transform:rotate(-125deg);
 }
 .child4{
-  width: 28%;
-  height: 50%;
-  left: -30px;;
-  bottom:60px;
+  width: 320px;
+  height: 320px;
+  /* left: -30px;; */
+  bottom:10px;
+  
 }
 .child5 {
-  width: 35%;
-  height: 53%;
-  right:-50px;
-  bottom:0px;
+  width: 380px;
+  height: 380px;
+  right:-40px;
+  bottom:30px;
 }
 /* **************nav************** */
 
@@ -305,47 +320,41 @@ footer img{
 /*1200pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 1200px) {
   /* **************封面圖************** */
-  .parent{
-    padding-bottom: 10%;
-  }
   header a {
     font-size: 18px;
   }
   header h1{
-    line-height: 220px;
-    margin-top: 150px;
-    font-size: 48px;
+    /* line-height: 220px; */
+    /* margin-top: 150px; */
+    font-size: 44px;
   }
   .icon-menu {
     display: none;
 }
 
   .child1{
-    width: 50%;
-    height: 50%;
-    left:-110px;
-    top:-30px;
+    width: 36%;
+    height: 36%;
+    left:-10px;
+    top:5%;
   }
   .child2{
     width: 30%;
-    height: 55%;
-    left:35%;
-    top:-70px;
+    height: 44%;
+    left:38%;
+    top:0;
   }
   .child3{
-    width: 40%;
-    height: 90%;
-    right:-150px;
-    top:-200px;
+    width: 38%;
+    height: 65%;
   }
   .child4{
-    width: 30%;
-    left: -40px;;
-    bottom:20px;
+    left: -50px;;
+    bottom:-30px;
   }
   .child5 {
-    width: 40%;
-    height: 55%;
+    width: 330px;
+    height: 330px;
     right:-50px;
     bottom:-20px;
   }
@@ -416,7 +425,7 @@ nav.active {
 /*768pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 768px) {
   .parent{
-    padding-bottom: 7%;
+    padding-bottom: 3%;
   }
   .nav1 ul{
     margin-top: 20px;
@@ -438,40 +447,41 @@ nav.active {
     position: relative;
   }
   header h1{
-    font-size: 36px;
-    line-height: 270px;
-  margin-top: 90px;
+    font-size: 34px;
+    line-height: 300px;
+  margin-top: 60px;
   }
   .header{
     position: relative;
     }
   .child1{
-    width: 60%;
-    height: 50%;
-    left:-110px;
-    top:-30px;
+    width: 35%;
+    /* height: 50%; */
+    left:-10px;
+    top:0px;
   }
   .child2{
-    width: 40%;
-    height: 55%;
-    left:30%;
-    top:-70px;
+    width: 30%;
+    /* height: 30%; */
+    /* left:30%; */
+    top:-20px;
   }
   .child3{
-    width: 50%;
-    right:-150px;
-    top:-160px;
+    /* width: 40%; */
+    right:-70px;
+    top:-70px;
   }
   .child4{
-    width: 38%;
-    left: -60px;;
-    bottom:0px;
+    width: 200px;
+    height: 200px;
+    left: -30px;
+    bottom:-10px;
   }
   .child5 {
-    width: 48%;
-    height: 55%;
-    right:-50px;
-    bottom:-70px;
+    width: 230px;
+    height: 230px;
+    right:-30px;
+    bottom:0px;
   }
   .linear{
     height: 150px;
@@ -590,21 +600,26 @@ footer img{
 /*480pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 @media (max-width: 480px) {
   .parent{
-    padding-bottom: 3%;
+    padding-bottom: 12%;
   }
   
   header h1{
-    font-size: 28px;
+    font-size: 24px;
     line-height: 180px;
   margin-top: 50px;
   }
   .child3{
-    width: 50%;
-    right:-100px;
-    top:-120px;
+    width: 38%;
+    height: 38%;
+    right:-20px;
+    top:10px;
+  }
+  .child4{
+    width: 160px;
+    height: 160px;
   }
     .child5 {
-    width: 45%;
+    width: 180px;
     bottom:-50px;
   }
   
